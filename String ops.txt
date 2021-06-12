@@ -1,0 +1,7 @@
+#Basic String Functions
+
+capitalize() - Convert first letter to capital
+upper() - Convert string to capital
+split() - Splits string into words with delimiter passed as argument
+join() - 
+list() - Convert string to each letter array
