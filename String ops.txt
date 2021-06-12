@@ -6,10 +6,15 @@ split() - Splits string into words with delimiter passed as argument
 join() - Join words and letters and make string as per delimiter provided in argument
 list() - Convert string to each letter array
 
-#Other helpful
+#find
+string.find(substring) - find first substring from string and return
+string.startswith(substring) - revert true if substring starts with string
 
+#Conversion
 textwrap.wrap(text, width=xx) - Subdivide text to width and return to variable
 swapcase() - Convert Capital to small and vice versa
 capitalize() - Convert first letter to capital
 upper() - Convert string to capital
 lower() - Convert string to lower
+
+ljust, rjust and center - alignment adjustment
