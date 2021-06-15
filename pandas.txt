@@ -1,0 +1,16 @@
+## Import and read
+
+
+import pandas as pd
+url / file path to variable  -- resuable
+df = pd.read_csv(url / file path, headers)  --df will be pandas dataframe which will have all data of headers mentioned in URL/File path
+default header can be replaced by df. columns = headers   -- where header is list [a,b,c...]
+
+to Export dataframe to file
+path = 'File path'
+df.to_csv(path)
+
+Printing data
+df  -- Print dataframe
+df.head(n)  -- top n rows
+de.tail(n)  -- bottom n rows
