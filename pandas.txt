@@ -4,13 +4,21 @@
 import pandas as pd
 url / file path to variable  -- resuable
 df = pd.read_csv(url / file path, headers)  --df will be pandas dataframe which will have all data of headers mentioned in URL/File path
+read_csv can be read_jsom / read_excel/ read_sql
+
 default header can be replaced by df. columns = headers   -- where header is list [a,b,c...]
 
 to Export dataframe to file
 path = 'File path'
-df.to_csv(path)
+df.to_csv(path)   --- Same way df to json/excel/sql
 
 Printing data
 df  -- Print dataframe
 df.head(n)  -- top n rows
-de.tail(n)  -- bottom n rows
+df.tail(n)  -- bottom n rows
+df.dtypes -- data types of columns
+df.describe -- Statistical summary of data  (with include="all") gives summary of all columns
+df.info() -- Provides first and last 30 rows of dataframe
+
+replace the "?" symbol with NaN   -- To remove all NaN object replace and remove
+df=df1.dropna(subset=["price"], axis=0)
