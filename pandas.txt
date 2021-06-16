@@ -19,6 +19,32 @@ df.tail(n)  -- bottom n rows
 df.dtypes -- data types of columns
 df.describe -- Statistical summary of data  (with include="all") gives summary of all columns
 df.info() -- Provides first and last 30 rows of dataframe
+df["header"].max() -- Max value from argument "header"
+df["header"].min() -- Min value from argument "header"
+df["header"].mean() -- Mean value from argument "header"
+df["header"].std() -- Standard deviation value from argument "header"
 
 replace the "?" symbol with NaN   -- To remove all NaN object replace and remove
 df=df1.dropna(subset=["price"], axis=0)
+
+## Wrangling 
+1. Remove or correct missing values  -- 0/NaN/?/ [blank]  -- Drop missing / replace data by average or most common like most frequent
+   df.dropna(subset = ["column header"], axis = 0, inplace = True)  -- remove all NaN data from column having header column header, 0 for row and 1 for column, inplace = true 
+   replace and update the dataframe without that nothing happens
+   
+   df.replace["column header"].replace(np.nan, mean = df["column header].mean) -- replace use to replace (values to be replaced, to updated values to replace)
+2. Normalization / Formatting --  Ahmedabad/A'bad/Ahmadabad -- Same way as replace we can use 
+   For Normalization 
+   1. Scaling (Xold/Xmax)  -- df[""]=df[""]/df[""].max()   -- Max maximum value
+   2. Min-Max (Xold-Xmin/Xmax-Xmin) 
+   3. Z score (Xold - Mu / Sigma)  -- Mu is average and Sigma is Std.deviation 
+
+3. Centering / Scaling
+   df["Price in USD"]= df["Price in USD"]*78  -- USD to INR Applying calculation to entire column
+   df.rename(columns={"USD","INR"},inplace=True)
+4. Convert to correct data type
+   df["Price in USD"] = df.["Price in USD"].asype("int")  -- Converts data type of column header "Price in USD" to integer  -- Useful if not integer
+
+##Access Column
+df["column header"]   -- Returns column values of passed argument "column header"
+df["column header"] + n   -- To add / remove n value to all the elements of complete column "column header"
