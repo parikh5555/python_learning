@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+
+
+fig = plt.figure(figsize =(10, 7))  -- Size of figure 
+
+# Creating plot
+plt.boxplot(data)  -- Create box plot of data 
+plt.scatter(x,y)  -- Create scatter plot of x vs y
+
+# show plot
+plt.show()
