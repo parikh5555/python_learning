@@ -54,6 +54,14 @@ df=df1.dropna(subset=["price"], axis=0)
 6. Categorial variable to Quantatitive variable 
    pd.get_dummies(df["fuel"]) -- Converts gas or diesel seperate row headers and assign 1 or 0 to each
 
+7. Groupby
+   df_test = df[["Param1", "Param2", "Param3"]] -- Will make new dataframe df_test and copy column name param1, param2 and 3 into it
+   df_grp = df_test.groupby(['Param1','Param2'], as_index=False).mean()  -- Creates new dataframe named df_grp having param1 and param2 value grouped by and mean of param3
+   
+8. Pivot tables
+   df_pivot = df_grp.pivot(index="param1", columns="param2") -- Will convert above group by params to show in different columns of param2 vs rows of param1
+   
+
 ##Access Column
 df["column header"]   -- Returns column values of passed argument "column header"
 df["column header"] + n   -- To add / remove n value to all the elements of complete column "column header"
