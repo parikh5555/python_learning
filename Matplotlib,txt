@@ -17,3 +17,8 @@ plt.xlable("Label of X axis")
 plt.ylable("Label of Y axis")
 
 plt.show()  --show plot
+
+
+#heatmap
+plt.pcolor(df_pivot, cmap="RdBu")   -- Red blue
+plt.colorbar()  
