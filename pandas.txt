@@ -23,6 +23,7 @@ df["header"].max() -- Max value from argument "header"
 df["header"].min() -- Min value from argument "header"
 df["header"].mean() -- Mean value from argument "header"
 df["header"].std() -- Standard deviation value from argument "header"
+df["header"].value_count() -- return count of values present in header 
 
 replace the "?" symbol with NaN   -- To remove all NaN object replace and remove
 df=df1.dropna(subset=["price"], axis=0)
@@ -44,6 +45,14 @@ df=df1.dropna(subset=["price"], axis=0)
    df.rename(columns={"USD","INR"},inplace=True)
 4. Convert to correct data type
    df["Price in USD"] = df.["Price in USD"].asype("int")  -- Converts data type of column header "Price in USD" to integer  -- Useful if not integer
+
+5. Binning
+   bins = np.linespace(min(df["Price"]), max(df["Price"]), 4) -- converts 4 equal parts between max and min prices -- 4 parts so 3 bins
+   group_names = ["low", "med, "high"]
+   df["price_binned"] = pd.cut(df["price"], bins, lables = group_names, include_lowest=True) -- Cut and store sorted data values into bins
+
+6. Categorial variable to Quantatitive variable 
+   pd.get_dummies(df["fuel"]) -- Converts gas or diesel seperate row headers and assign 1 or 0 to each
 
 ##Access Column
 df["column header"]   -- Returns column values of passed argument "column header"
