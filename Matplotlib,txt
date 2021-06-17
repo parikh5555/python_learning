@@ -1,14 +1,19 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-
-
+df = pd.read_csv(url / file path, headers)  --df will be pandas dataframe which will have all data of headers mentioned in URL/File path
+y = df["param1"]
+x = df["param2"]
 
 fig = plt.figure(figsize =(10, 7))  -- Size of figure 
 
 # Creating plot
-plt.boxplot(data)  -- Create box plot of data 
+plt.boxplot(x)  -- Create box plot of x -- param2 
 plt.scatter(x,y)  -- Create scatter plot of x vs y
 
-# show plot
-plt.show()
+
+plt.title("My title of the plot will come here")
+plt.xlable("Label of X axis")
+plt.ylable("Label of Y axis")
+
+plt.show()  --show plot
