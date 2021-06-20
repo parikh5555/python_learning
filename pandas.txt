@@ -67,4 +67,5 @@ df.corr() -- Returns dataframe of correlation
 
 ##Access Column
 df["column header"]   -- Returns column values of passed argument "column header"
-df["column header"] + n   -- To add / remove n value to all the elements of complete column "column header"
+df["column header"] + n   -- To add / subtract n value to all the elements of complete column "column header"
+df.drop(['A'], axis = 1)  -- To remove A column from dataframe
