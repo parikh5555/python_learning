@@ -1,0 +1,8 @@
+import sklearn
+
+
+Linear regression
+from sklearn.linear_model import LinearRegression
+
+y = df['Output']  -- Prediction output variable
+x = df['Input1', 'Input2', 'Input3'] --Input 
