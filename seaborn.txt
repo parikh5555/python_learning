@@ -11,3 +11,7 @@ ax.set_xticklabels(
     rotation=45,
     horizontalalignment='right'
 );
+
+#Boxplot
+
+ax = sns.boxplot(x=Dataframe["Column_name"])
