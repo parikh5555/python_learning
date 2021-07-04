@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns 
+%matplotlib notebook #to generate all plots in same browser in jupyter
 
 df = pd.read_csv(url / file path, headers)  --df will be pandas dataframe which will have all data of headers mentioned in URL/File path
 y = df["param1"]
@@ -11,6 +12,12 @@ fig = plt.figure(figsize =(10, 7))  -- Size of figure
 
 # Create a dot on x,y position
 plt.plot(x,y,'o')
+
+df.plot(kind="line")  #line graph of complete dataframe
+
+
+df["Column_name"].plot(kind = "hist")  #histogram of perticular column in dataframe
+
 
 # Creating plot
 plt.boxplot(x)  -- Create box plot of x -- param2 
