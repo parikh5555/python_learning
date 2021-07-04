@@ -9,6 +9,9 @@ x = df["param2"]
 
 fig = plt.figure(figsize =(10, 7))  -- Size of figure 
 
+# Create a dot on x,y position
+plt.plot(x,y,'o')
+
 # Creating plot
 plt.boxplot(x)  -- Create box plot of x -- param2 
 plt.scatter(x,y)  -- Create scatter plot of x vs y
