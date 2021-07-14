@@ -75,3 +75,6 @@ new = df[['column1', 'column2']]  -- To copy column 1 and 2 to new dataframe fro
 q_low = df["col"].quantile(0.01)
 q_hi  = df["col"].quantile(0.99)
 df_filtered = df[(df["col"] < q_hi) & (df["col"] > q_low)]
+
+## .loc 
+df.loc[[row1,row2],[column1,column2]]  # Returns sub table of row1,row2,column1,column2
