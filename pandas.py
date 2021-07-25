@@ -61,7 +61,9 @@ df=df1.dropna(subset=["price"], axis=0)
 8. Pivot tables
    df_pivot = df_grp.pivot(index="param1", columns="param2") -- Will convert above group by params to show in different columns of param2 vs rows of param1
 
-
+9. Date Parsing
+   df['date_parsed'] = pd.to_datetime(df['date'], format="%m/%d/%y") -- If date is not date time format it needs to be parsed for better representation          
+   
 ##Correlation
 df.corr() -- Returns dataframe of correlation
 
