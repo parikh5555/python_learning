@@ -24,3 +24,10 @@ total_missing = missing_values_count.sum()
 # percent of data that is missing
 percent_missing = (total_missing/total_cells) * 100
 print(percent_missing)
+
+# 1. Fill NaN by 0
+sf_permits.fillna(0, ,inplace = True)
+
+# 2. Fill NaN by Mean of individual columns
+sf_permits.fillna(sf_permits.mean(),inplace = True)
+
