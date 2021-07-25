@@ -32,5 +32,7 @@ sf_permits.fillna(0, ,inplace = True)
 sf_permits.fillna(sf_permits.mean(),inplace = True)
 
 # 3. Replace NaN with value coming exactly after it - bfill method
-
 sf_permits.fillna(method='bfill', axis=0).fillna(0)
+
+# 4. Interpolation for timeseries continuation data
+sf_permits.interpolate()
