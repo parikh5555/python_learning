@@ -36,3 +36,9 @@ sf_permits.fillna(method='bfill', axis=0).fillna(0)
 
 # 4. Interpolation for timeseries continuation data
 sf_permits.interpolate()
+
+# Find and replace wrong data entry
+uniquee = sf_permits['Param'].unique()  #Returns all unique entries from Param
+sf_permits['Param'] = sf_permits['Param'].str.lower() # convert to lower case
+sf_permits['Param'] = sf_permits['Param'].str.strip() # remove trailing white spaces
+
