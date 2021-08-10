@@ -31,6 +31,7 @@ plt.ylable("Label of Y axis")
 plt.show()  --show plot
 
 
+
 #heatmap
 plt.pcolor(df_pivot, cmap="RdBu")   -- Red blue
 plt.colorbar()  
@@ -44,3 +45,9 @@ sns.regpot( data1, data2)  -- Where data1 and data2 are parameters for which we'
 #Distribution plot to evaluate the model work
 ax1 = sns.distplot(df[prediction], label = "Actual value")
 sns.distplot(Yhat, label = "Fitted values", ax=ax1)
+
+#Histogram plot
+sns.histplot(x=df_train['weight'],bins=80)
+
+#Scatter plot for regression to visualize 
+sns.pairplot(resp)
