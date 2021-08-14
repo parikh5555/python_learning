@@ -13,3 +13,17 @@ missing.plot.bar()
 # it's very important to understand the missing values parameter impact
 # 
 
+
+# 2. Dsitribution of Output paramter of training dataset
+
+import scipy.stats as st
+y = train['SalePrice']   ##Parameter to predict
+plt.figure(1); plt.title('Johnson SU')
+sns.distplot(y, kde=False, fit=st.johnsonsu)
+plt.figure(2); plt.title('Normal')
+sns.distplot(y, kde=False, fit=st.norm)
+plt.figure(3); plt.title('Log Normal')
+sns.distplot(y, kde=False, fit=st.lognorm)
+
+# It'll give the idea how output parameter is distributed
+# So one can get idea whether linear regression would be applicable or not
