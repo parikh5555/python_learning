@@ -3,8 +3,14 @@
 #Important
 
 split() - Splits string into words with delimiter passed as argument
+array = string.split("seperator") -- if it's csv comma can be used as seperator
+
 join() - Join words and letters and make string as per delimiter provided in argument
+"String which combines array".join(Array) -- "".join(Arr1)  -- Will join all element Arr without any string as "" is empty
+
 list() - Convert string to each letter array
+.replace("String A","String B")
+
 
 #find
 string.find(substring) - find first substring from string and return
